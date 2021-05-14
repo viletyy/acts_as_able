@@ -1,4 +1,5 @@
-module ActsAsFollowable
+module ActsAsAble
+  # 不喜欢
   module Unliker
     def self.included(base)
       base.extend         ClassMethods
@@ -8,7 +9,7 @@ module ActsAsFollowable
     module ClassMethods
       # Those call this method has the ability to be unlike by others
       def acts_as_unliker
-        include ActsAsFollowable::FollowableExt
+        include ActsAsAble::AbleExt
         has_many :unlikes, as: :unliker, dependent: :destroy, class_name: 'Unlike' # 有很多不喜欢的 Object
       end
     end

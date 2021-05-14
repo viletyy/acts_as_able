@@ -1,5 +1,5 @@
-module ActsAsFollowable
-  module FollowableExt #这个是被关注
+module ActsAsAble
+  module AbleExt #这个是被关注
     private
 
     #  有可能有STI的情况出现

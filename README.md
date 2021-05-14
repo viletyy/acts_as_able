@@ -1,13 +1,19 @@
+<!--
+ * @Date: 2021-05-14 15:55:52
+ * @LastEditors: viletyy
+ * @LastEditTime: 2021-05-14 16:37:30
+ * @FilePath: /acts_as_followable/README.md
+-->
 # ActsAsFollowable
 
-这就是一个给国人用的 关注（点赞）有关的 Gem 目前仅仅只想支持Rails5
+这就是一个给国人用的 关注、浏览、点赞等有关的 Gem 
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'acts_as_followable', git: 'git://github.com/w-zengtao/acts_as_followable.git'
+gem 'acts_as_able', git: 'git://github.com/viletyy/acts_as_able.git'
 ```
 
 And then execute:
@@ -16,16 +22,17 @@ And then execute:
 
 ## Usage
 
-最开始你需要:
+### 关注功能
 ```ruby
 rails g acts_as_followable
 rails db:migrate
 ```
 
-然后有两个类方法可以放在需要使用的类中:
+以下方法可以放在需要使用的类中:
 ```ruby
 acts_as_followable  #被关注
 acts_as_follower    #关注者
+
 
 class Article < ApplicationRecord
   acts_as_followable

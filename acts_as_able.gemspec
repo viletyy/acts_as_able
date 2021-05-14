@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'acts_as_followable/version'
+require 'acts_as_able/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "acts_as_followable"
-  spec.version       = ActsAsFollowable::VERSION
-  spec.authors       = ["ZengTao"]
-  spec.email         = ["so.zengtao@gmail.com"]
+  spec.name          = "acts_as_able"
+  spec.version       = ActsAsAble::VERSION
+  spec.authors       = ["Viletyy"]
+  spec.email         = ["yystopf@gmail.com"]
 
-  spec.summary       = %q{ActsAsFollowable Just Save Time For You.}
-  spec.description   = %q{ActsAsFollowable Just Save Time For You.}
-  spec.homepage      = "https://github.com/w-zengtao"
+  spec.summary       = %q{ActsAsAble Just Save Time For You.}
+  spec.description   = %q{ActsAsAble Just Save Time For You.}
+  spec.homepage      = "https://github.com/viletyy"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
