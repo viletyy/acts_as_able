@@ -1,6 +1,6 @@
 require 'generators/acts_as_able_generator'
 
-class ActsAsUnlikeableGenerator < ActsAsAbleGenerator
+class ActsAsViewableGenerator < ActsAsAbleGenerator
   def create_migration_file
     migration_template 'view_migration.rb', 'db/migrate/acts_as_viewable_migration.rb'
   end

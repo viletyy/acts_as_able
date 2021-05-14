@@ -22,7 +22,7 @@ module ActsAsAble
 
       # 是否不喜欢某对象
       def view?(obj)
-        !unlike_by(obj).blank?
+        !view_by(obj).blank?
       end
 
       private

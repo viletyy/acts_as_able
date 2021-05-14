@@ -7,9 +7,9 @@ module ActsAsAble
     end
 
     module ClassMethods
-      # Those call this method has the ability to be unlike by others
+      # Those call this method has the ability to be unlike by others 
       def acts_as_viewable
-        include ActAsAble::AbleExt
+        include ActsAsAble::AbleExt
         has_many :viewers, as: :viewable, dependent: :destroy, class_name: 'View'
       end
     end

@@ -1,4 +1,4 @@
-class ActsAsUnlikableMigration < ActiveRecord::Migration[5.0]
+class ActsAsViewableMigration < ActiveRecord::Migration[5.0]
   def self.up
     create_table :views, force: true do |t|
       t.references :viewable, polymorphic: true, null: false

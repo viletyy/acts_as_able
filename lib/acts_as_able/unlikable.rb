@@ -9,7 +9,7 @@ module ActsAsAble
     module ClassMethods
       # Those call this method has the ability to be unlike by others
       def acts_as_unlikable
-        include ActAsAble::AbleExt
+        include ActsAsAble::AbleExt
         has_many :unlikers, as: :unlikable, dependent: :destroy, class_name: 'Unlike'
       end
     end

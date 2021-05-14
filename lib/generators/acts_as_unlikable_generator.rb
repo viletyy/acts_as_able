@@ -1,6 +1,6 @@
 require 'generators/acts_as_able_generator'
 
-class ActsAsUnlikeableGenerator < ActsAsAbleGenerator
+class ActsAsUnlikableGenerator < ActsAsAbleGenerator
   def create_migration_file
     migration_template 'unlike_migration.rb', 'db/migrate/acts_as_unlikable_migration.rb'
   end
