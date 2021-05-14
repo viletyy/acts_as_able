@@ -1,9 +1,6 @@
-require 'rails/generators'
-require 'rails/generators/migration'
+require 'generators/acts_as_able_generator'
 
-class ActsAsFollowableGenerator < Rails::Generators::Base
-  include Rails::Generators::Migration
-
+class ActsAsFollowableGenerator < ActsAsAbleGenerator
   def create_migration_file
     migration_template 'follow_migration.rb', 'db/migrate/acts_as_followable_migration.rb'
   end
