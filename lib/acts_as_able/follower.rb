@@ -19,7 +19,7 @@ module ActsAsAble
       #   # 3:   是否关注
       #   # 4:   关注了某个 model 多少个 obj
       def follow(obj)
-        self.follows.find_or_create_by(followable_id: obj.id, followable_type: class_name(obj)) if obj != self
+        self.follows.find_or_create_by(followable_id: obj.id, followable_type: class_name(obj))
       end
 
       def unfollow(obj)

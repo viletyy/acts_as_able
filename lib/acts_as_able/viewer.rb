@@ -1,5 +1,5 @@
 module ActsAsAble
-  # 不喜欢
+  # 发起浏览的对象
   module Viewer
     def self.included(base)
       base.extend         ClassMethods
@@ -15,14 +15,19 @@ module ActsAsAble
     end
 
     module InstanceMethods
-      # 不喜欢某对象
+      # 浏览某对象
       def view(obj)
-        self.views.find_or_create_by(viewable_type: class_name(obj), viewable_id: obj.id) if obj != self
+        self.views.create(viewable_type: class_name(obj), viewable_id: obj.id) 
       end
 
-      # 是否不喜欢某对象
+      # 是否浏览某对象
       def view?(obj)
         !view_by(obj).blank?
+      end
+
+      # 查看某种类型浏览的所有对象
+      def viewings(viewable_type)
+        return viewable_type.constantize.where(id: self.views.where(viewable_type: viewable_type).pluck(:viewable_id))
       end
 
       private
