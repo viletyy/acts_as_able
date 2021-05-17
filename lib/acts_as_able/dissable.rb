@@ -8,7 +8,7 @@ module ActsAsAble
 
     module ClassMethods
       # Those call this method has the ability to be unlike by others
-      def acts_as_disable
+      def acts_as_dissable
         include ActsAsAble::AbleExt
         has_many :dissers, as: :dissable, dependent: :destroy, class_name: 'Diss'
       end
