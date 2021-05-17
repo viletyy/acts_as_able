@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{ActsAsAble Just Save Time For You.}
   spec.description   = %q{ActsAsAble Just Save Time For You.}
-  spec.homepage      = "https://github.com/viletyy"
+  spec.homepage      = "https://github.com/viletyy/acts_as_able"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
