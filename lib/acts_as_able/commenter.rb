@@ -15,11 +15,6 @@ module ActsAsAble
     end
 
     module InstanceMethods
-      # 所有的一级评论
-      def root_comments 
-        self.comments.where(parent_id: nil)
-      end
-
       # 评论某对象
       def comment(content, obj, parent_comment = nil)
         if parent_comment.present? && parent_comment.is_a?(Comment)

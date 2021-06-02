@@ -18,13 +18,23 @@ module ActsAsAble
       def root_commenters 
         self.commenters.where(parent_id: nil)
       end
+
+      def root_commenters_by_type(commenter_type, options= {})
+        ids = Comment.
+          where('commentable_id' => self.id,
+                'commentable_type' => class_name(self),
+                'commenter_type' => commenter_type.name,
+                'parent_id' => nil
+        ).pluck('commenter_id')
+        return commenter_type.where("id in (?)", ids)
+      end
       
       def comment_count
         self.commenters.count
       end
 
       def commenters_by_type(commenter_type, options = {})
-        ids = Diss.
+        ids = Comment.
           where('commentable_id' => self.id,
                 'commentable_type' => class_name(self),
                 'commenter_type' => commenter_type.name
