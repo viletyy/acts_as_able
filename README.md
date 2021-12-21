@@ -200,8 +200,8 @@ rails db:migrate
 
 以下方法可以放在需要使用的类中:
 ```ruby
-acts_as_commentable  #被点赞
-acts_as_commenter    #点赞者
+acts_as_commentable  #被评论
+acts_as_commenter    #评论者
 
 
 class Article < ApplicationRecord
